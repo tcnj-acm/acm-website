@@ -1,0 +1,41 @@
+h1 {
+    color: #283E6E;
+    font-size: 2.2em;
+    text-align: center;
+    margin-top: 0;
+}
+
+#home-heading {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+#home-heading > * {
+    padding: 10px;
+}
+
+#home-heading > img {
+    display: block;
+    width: 50%;
+    max-width: 300px;
+}
+
+#front-img {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    #home-heading {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.6em;
+    }
+}

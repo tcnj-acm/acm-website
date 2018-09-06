@@ -1,0 +1,12 @@
+---
+email: acm@tcnj.edu
+---
+<h1>Contact Us</h1>
+<form action="https://formspree.io/{{email}}" method="POST">
+    <label>Name: <input type="text" name="name"></label>
+    <label>Email: <input type="email" name="_replyto"></label>
+    <label>Message:</label>
+    <textarea title="message" name="message" rows="5"></textarea>
+    <input type="submit" value="Send">
+</form>
+<span>Or email us directly at <a href="mailto:{{email}}" target="_blank" rel="noopener"><span>{{email}}</span></a>.</span>

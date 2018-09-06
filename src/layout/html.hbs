@@ -1,0 +1,71 @@
+---
+title: TCNJ ACM
+description: The mission of the TCNJ ACM student chapter is to create a collaborative environment in which all students interested in computing science can come together to share ideas, partake in activities, and learn together.
+tags:
+- acm
+- code
+- tcnj
+- programming
+- college
+- club
+url: https://www.tcnj.edu/~acm
+links:
+CS Department: https://computerscience.tcnj.edu
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+        <title>{{sanitize title}} | {{sanitize (titleize (replace (replace (replace @file.basename '.hbs' '') '-' ' ') 'index' 'home'))}}</title>
+
+        <meta name="description" content="{{sanitize description}}"/>
+        <meta name="keywords" content="{{join tags ','}}"/>
+
+        <meta itemprop="name" content="{{sanitize title}} | {{sanitize (titleize (replace (replace (replace @file.basename '.hbs' '') '-' ' ') 'index' 'home'))}}"/>
+        <meta itemprop="description" content="{{sanitize description}}"/>
+        <meta itemprop="image" content="{{url}}/img/icon.png"/>
+
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="{{sanitize title}} | {{sanitize (titleize (replace (replace (replace @file.basename '.hbs' '') '-' ' ') 'index' 'home'))}}"/>
+        <meta name="twitter:description" content="{{sanitize description}}"/>
+        <meta name="twitter:image" content="{{url}}/img/icon.png"/>
+        <meta name="twitter:image:src" content="{{url}}/img/icon.png"/>
+
+        <meta property="og:title" content="{{sanitize title}} | {{sanitize (titleize (replace (replace (replace @file.basename '.hbs' '') '-' ' ') 'index' 'home'))}}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="{{url}}/{{@file.relative}}"/>
+        <meta property="og:image" content="{{url}}/img/icon.png"/>
+        <meta property="og:description" content="{{sanitize description}}"/>
+        <meta property="og:site_name" content="{{sanitize title}} | {{sanitize (titleize (replace (replace (replace @file.basename '.hbs' '') '-' ' ') 'index' 'home'))}}"/>
+
+        {{{favicon}}}
+
+        {{#each css}}
+            <link rel="stylesheet" href="css/{{this}}"/>
+        {{/each}}
+    </head>
+    <body>
+        <header id="website-header">
+            <nav>
+                <ul>
+                    {{#each pages}}
+                        <li><a href="{{this}}.html"><div>{{titleize (replace (replace this '-' ' ') 'index' 'home')}}</div></a></li>
+                    {{/each}}
+                    {{#each links}}
+                        <li><a target="_blank" rel="noopener" href="{{this}}"><div>{{@key}}</div></a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            {{{content}}}
+        </main>
+        
+        {{#each js}}
+            <script src="js/{{this}}"></script>
+        {{/each}}
+    </body>
+</html>

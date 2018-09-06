@@ -1,0 +1,32 @@
+---
+heading: Association for Computing Machinery
+mission: The mission of the TCNJ ACM student chapter is to create a collaborative environment in which all students interested in computing science can come together to share ideas, partake in activities, and learn together. ACM activities include tech talks, group trips, and an annual hackathon, HackTCNJ. ACM also connects students to resources in the computing community such as hackathons, computer science groups, and professional or academic opportunities. We are an ACM accredited chapter and we welcome all students regardless of ethnicity, experience level, major, or gender. TCNJ ACM membership is also free for all students.
+meeting:
+  day: Wednesday
+  time: "1:00pm"
+  room: STEM 102
+---
+<header id="home-heading">
+    <img id="tcnj-img" src="img/icon.png" alt="TCNJ">
+    <h1>{{heading}}</h1>
+</header>
+
+<img id="front-img" src="img/home.jpg" alt="ACM"/>
+
+
+<h2>Mission</h2>
+<p>{{mission}}</p>
+
+
+<h2>Meeting Times</h2>
+<p>{{meeting.day}} at {{meeting.time}} in {{meeting.room}}.</p>
+
+<h2>Mailing List Sign Up</h2>
+<form action="https://tcnj.us10.list-manage.com/subscribe/post?u=bbccc42fc1a74775fee14e1a2&amp;id=e491c07012" method="post" target="_blank" novalidate>
+    <label>First Name: <input type="text" name="FNAME"></label>
+    <label>Last Name: <input type="text" name="LNAME"></label>
+    <label>Email: <input type="email" name="EMAIL"></label>
+    <label>Graduating Year: <input type="number" name="YEAR"></label>
+    <label>Major: <input type="text" name="MAJOR"></label>
+    <input type="submit" value="Subscribe" name="subscribe">
+</form>

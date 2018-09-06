@@ -1,0 +1,50 @@
+#members-ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+#members-ul > li {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+    padding-bottom: 20px;
+}
+
+#members-ul > li:nth-child(2n - 1) {
+    padding-right: 20px;
+}
+
+#members-ul > li > * {
+    margin: 10px 0 0 0;
+}
+
+#members-ul > li > a {
+    font-size: 20pt;
+}
+
+#members-ul > li > a > span {
+    display: inline-block;
+}
+
+#members-ul > li > span {
+    font-size: 13pt;
+}
+
+img {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    #members-ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #members-ul > li {
+        padding: 0 0 20px;
+        width: 100%;
+    }
+}

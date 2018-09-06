@@ -1,0 +1,61 @@
+---
+members:
+- name: Sophie Goldberg
+  title: President
+  major: Computer Science Major and Interactive Multimedia Minor
+  class: Junior
+  link: https://www.linkedin.com/in/goldbergsophia
+- name: Ananya Srinivasan
+  title: Vice President
+  major: Computer Science Major
+  class: Senior
+  link: https://www.linkedin.com/in/ananya-srinivasan-4a561a12b
+- name: Jabari Brown
+  title: Secretary
+  major: Computer Science Major and Music Minor
+  class: Senior
+  link: https://www.linkedin.com/in/jabari-brown-047278108
+- name: Sarah Almeda
+  title: Outreach Chair
+  major: Computer Science Major and Fine Arts Minor
+  class: Junior
+  link: https://www.linkedin.com/in/sarah-almeda
+- name: Emily Kazenmayer
+  title: Treasurer
+  major: Computer Science Major
+  class: Senior
+  link: https://www.linkedin.com/in/emilykazenmayer
+- name: Tomer Aberbach
+  title: Webmaster
+  major: Computer Science Major and Mathematics Minor
+  class: Junior
+  link: https://tomeraberba.ch
+- name: Thomas Orth
+  title: Underclassmen Representative
+  major: Computer Science Major
+  class: Sophomore
+  link: https://www.linkedin.com/in/tomorth
+advisor:
+  name: Dr. Andrea Salgian
+  title: Assoc. Professor of Computer Science
+  link: https://computerscience.tcnj.edu/faculty-staff/faculty/dr-andrea-salgian
+---
+<h1>About Us</h1>
+
+<ul id="members-ul">
+    {{#each members}}
+        <li>
+            <div><img src="img/people/{{lowercase (replace title ' ' '-')}}.png" alt="{{name}}"/></div>
+            <a target="_blank" rel="noopener" href="{{link}}"><span>{{name}}</span></a>
+            <span>{{title}}</span>
+            <span>{{major}}</span>
+            <span>{{class}}</span>
+        </li>
+    {{/each}}
+    <li>
+        <div><img src="img/people/advisor.png" alt="{{advisor.name}}"/></div>
+        <a target="_blank" rel="noopener" href="{{advisor.link}}"><span>{{advisor.name}}</span></a>
+        <span>Advisor</span>
+        <span>{{advisor.title}}</span>
+    </li>
+</ul>

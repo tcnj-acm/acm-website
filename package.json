@@ -1,0 +1,29 @@
+{
+  "name": "acm-website",
+  "author": "Tomer Aberbach <tomeraberbach@gmail.com> (https://tomeraberba.ch)",
+  "scripts": {
+    "start": "gulp",
+    "clean": "gulp clean",
+    "test": "standard",
+    "deploy": "standard && gulp && git add dist && git commit -m \"dist\" && git subtree split --prefix dist -b master && git push -f origin master:master && git branch -D master && git reset --hard HEAD~1 && gulp clean"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.3",
+    "cssnano": "^4.1.0",
+    "del": "^3.0.0",
+    "fs-extra": "^7.0.0",
+    "gulp": "^4.0.0",
+    "gulp-gray-matter": "^3.0.1",
+    "gulp-hb": "^7.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify-es": "^1.0.4",
+    "handlebars-helpers": "^0.10.0",
+    "jimp": "^0.4.0",
+    "merge-stream": "^1.0.1",
+    "standard": "*",
+    "through2": "latest"
+  }
+}

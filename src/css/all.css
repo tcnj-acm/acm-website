@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0 0 50px 0;
+}
+
+main {
+    width: 60%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a > span {
+    transition-property: color, transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+    transform-origin: left;
+}
+
+a > span:hover {
+    color: #283E6E;
+    transform: scale(1.15);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 15pt;
+    width: 60%;
+    margin: 0 auto;
+}
+
+form > label {
+    display: flex;
+    font-size: 15pt;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+form > label > input[type="text"], form > label > input[type="email"], form > label > input[type="number"], form > textarea {
+    flex: 1;
+    font-size: 15pt;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    border: solid 1px black;
+    margin-left: 10px;
+}
+
+form > textarea {
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+
+form > input[type="submit"] {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15pt;
+    background: white;
+    border: solid 1px black;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#website-header nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+    background-color: #141F3D;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#website-header a > div, #website-header a:link > div, #website-header a:visited > div {
+    font-size: 1.1em;
+    color: white;
+    padding: 20px;
+    transition-property: transform, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+#website-header a:hover > div, #website-header a:link:hover > div, #website-header a:visited:hover > div {
+    transform: scale(1.2);
+    color: gold;
+}
+
+@media (max-width: 900px) {
+    form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    #website-header a > div, #website-header a:link > div, #website-header a:visited > div {
+        font-size: 0.9em;
+    }
+
+    form > label, form > label > input[type="text"], form > label > input[type="email"], form > label > input[type="number"], form > textarea, form > input[type="submit"] {
+        font-size: 12.5pt;
+    }
+}
