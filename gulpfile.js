@@ -58,12 +58,12 @@ const img = () =>
           file.contents = buffer
           cb(null, file)
         }))
-      ).pipe(rename({ dirname: 'people' }))
+      ).pipe(rename({dirname: 'people'}))
   ).pipe(imagemin([
     imagemin.gifsicle(),
     imagemin.jpegtran(),
     imagemin.optipng(),
-    imagemin.svgo({ plugins: [{ removeTitle: false }] })
+    imagemin.svgo({plugins: [{removeTitle: false}]})
   ])).pipe(gulp.dest('dist/img'))
 
 const css = () => gulp.src('src/css/**/*.css').pipe(postcss([autoprefixer, cssnano])).pipe(gulp.dest('dist/css'))
@@ -83,9 +83,16 @@ const html = () => {
         return a.localeCompare(b)
       }
     })
+  const images = fs.readdirSync('src/img/gallery')
 
   return gulp.src('src/layout/pages/*.hbs')
     .pipe(matter())
+    .pipe(through.obj((file, enc, cb) => {
+      if (file.basename === 'gallery.hbs') {
+        file.data.images = images
+      }
+      cb(null, file)
+    }))
     .pipe(hb().helpers(hbhelpers))
     .pipe(through.obj((file, enc, cb) => {
       ['css', 'js'].forEach(ext => {
@@ -107,7 +114,7 @@ const html = () => {
       dirname: '',
       extname: '.html'
     }))
-    .pipe(htmlmin({ collapseBooleanAttributes: true }))
+    .pipe(htmlmin({collapseBooleanAttributes: true}))
     .pipe(gulp.dest('dist'))
 }
 

@@ -1,0 +1,15 @@
+#gallery-ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+#gallery-ul > li {
+    padding: 0 0 20px;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
