@@ -4,25 +4,26 @@
   "scripts": {
     "start": "gulp",
     "clean": "gulp clean",
+    "watch": "gulp watch",
     "test": "standard",
     "deploy": "standard && gulp && git add dist && git commit -m \"dist\" && git subtree split --prefix dist -b master && git push -f origin master:master && git branch -D master && git reset --hard HEAD~1 && gulp clean"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
     "cssnano": "^4.1.7",
-    "del": "^3.0.0",
-    "fs-extra": "^7.0.0",
+    "del": "^5.1.0",
+    "fs-extra": "^8.1.0",
     "gulp": "^4.0.0",
     "gulp-gray-matter": "^3.0.1",
-    "gulp-hb": "^7.0.1",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-hb": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-uglify-es": "^1.0.4",
     "handlebars-helpers": "^0.10.0",
-    "jimp": "^0.4.0",
-    "merge-stream": "^1.0.1",
+    "jimp": "^0.6.4",
+    "merge-stream": "^2.0.0",
     "standard": "*",
     "through2": "latest"
   }

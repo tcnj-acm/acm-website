@@ -10,14 +10,13 @@ Clone the repository:
 $ git clone https://github.com/tcnj-acm/acm-website.git
 ```
 
-Install [npm](https://www.npmjs.com/get-npm) if you don't have it.
+Install [yarn](https://yarnpkg.com) if you don't have it.
 
 Install the dependencies:
 
 ```sh
 $ cd acm-website
-$ npm install
-$ sudo npm i gulp@4.0.0 -g
+$ yarn install
 ```
 
 ## Building
@@ -25,7 +24,7 @@ $ sudo npm i gulp@4.0.0 -g
 Build in the `acm-website` folder:
 
 ```sh
-$ gulp
+$ yarn start
 ```
 
 The generated website will be in a folder named `dist`.
@@ -33,7 +32,7 @@ The generated website will be in a folder named `dist`.
 Run the following command to delete the `dist` folder:
 
 ```sh
-$ gulp clean
+$ yarn clean
 ```
 
 ## Development
@@ -41,7 +40,7 @@ $ gulp clean
 Automatically recompile the website when changes are made:
 
 ```sh
-$ gulp watch
+$ yarn watch
 ```
 
 Press `CTRL+C` to kill the process.
