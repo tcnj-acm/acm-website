@@ -23,6 +23,7 @@
     "gulp-uglify-es": "^1.0.4",
     "handlebars-helpers": "^0.10.0",
     "jimp": "^0.6.4",
+    "jpegtran-bin": "^7.0.0",
     "merge-stream": "^2.0.0",
     "standard": "*",
     "through2": "latest"
